@@ -16,4 +16,5 @@ public interface ClienteRepositorio extends CrudRepository<Usuario,String> {
 
     @Query("select c from Usuario c where c.cedula = :cedula")
     Usuario buscarPorCedula(String cedula);
+
 }
