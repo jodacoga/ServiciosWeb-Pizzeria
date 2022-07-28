@@ -18,4 +18,5 @@ public class ServiciosWebPizzeriaApplication extends SpringBootServletInitialize
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
 		return builder.sources(ServiciosWebPizzeriaApplication.class);
 	}
+
 }
