@@ -599,6 +599,7 @@ public class ControladorPedido {
 
         }
 
+
         System.out.println("Despues del for ");
         pe.setEstado(EstadoPedido.CANCELADO);
         f.setEstadoFactura(false);
@@ -607,5 +608,10 @@ public class ControladorPedido {
         stock=0;
 
         return ResponseEntity.ok("Pedido Eliminada correctamente");
+    }
+    @GetMapping("/hola")
+    public ResponseEntity<String> mensaje(){
+        String nombre = "Hola, voy a perder el ciclo";
+        return new ResponseEntity<String>(nombre, HttpStatus.OK);
     }
 }
