@@ -484,7 +484,7 @@ public class ControladorPedido {
 
         System.out.println("Correo: " + correo);
 
-
+        System.out.println(usua);
         fac.setPedidoFactura(pedido);
         System.out.println("Subtotal de Factura es: " + precioTotal);
         fac.setFechaFactura(new Date());
@@ -496,6 +496,7 @@ public class ControladorPedido {
         fac.setSubtotal(precioTotal);
         fac.setIva(iva);
         fac.setTotal(total);
+        System.out.println(fac);
 
 
         pedido.setPedidoFactura(fac);
