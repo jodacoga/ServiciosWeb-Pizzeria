@@ -398,7 +398,7 @@ public class ControladorPedido {
     }
 
     @PostMapping("/pedido/crearPedido")
-    public ResponseEntity<Pedido> crearPedido(@RequestBody IngresarPedido ingresarPedido) throws ParseException {
+    public ResponseEntity<Factura> crearPedido(@RequestBody IngresarPedido ingresarPedido) throws ParseException {
         Optional<Sucursal> sucursal = sucursalServicio.retriveSucursalByName(ingresarPedido.getSucursalNombre());
 
         if (sucursal.isEmpty()) {
@@ -560,7 +560,7 @@ public class ControladorPedido {
         System.out.println("Stock despues del for " + stock);
 
 
-        return ResponseEntity.ok(pedido);
+        return ResponseEntity.ok(fac);
     }
 
     @GetMapping("/pedido/listar/{codigo}")
